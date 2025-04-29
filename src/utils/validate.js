@@ -1,5 +1,3 @@
-const { isStringEmpty } = require("./string");
-
 const isUndefinedOrNullOrEmpty = (...values) => {
   return values.some(
     (value) => value === undefined || value === null || value === ""
