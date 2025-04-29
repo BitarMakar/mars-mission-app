@@ -2,7 +2,7 @@
   "name": "crud-app",
   "version": "1.0.0",
   "description": "A simple CRUD application with REST Endpoints",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "start": "node ."
   },
