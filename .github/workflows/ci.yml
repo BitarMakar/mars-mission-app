@@ -10,6 +10,10 @@ jobs:
   safety-checks:
     runs-on: ubuntu-latest
 
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      DIRECT_URL: ${{ secrets.DIRECT_URL }}
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -21,6 +25,9 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+
+      - name: Generate Prisma Models
+        run: npx prisma generate
 
       - name: Run lint checks
         run: npm run lint
